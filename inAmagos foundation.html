@@ -1,0 +1,435 @@
+Here is a complete standalone **HTML + CSS code** for the InAmigos Foundation website:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>InAmigos Foundation | Uniting Minds for Change</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #243b35;
+      background-color: #f7f4e9;
+    }
+
+    header {
+      background-color: #183b35;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f4c95d;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #e8ae43;
+      color: #183b35;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #f4c95d;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      min-height: 85vh;
+      background-color: #183b35;
+      color: white;
+      padding: 120px 8%;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      color: #f4c95d;
+    }
+
+    .hero h1 span {
+      color: white;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #e4e9df;
+    }
+
+    .outline-button {
+      display: inline-block;
+      color: white;
+      border: 1px solid white;
+      padding: 11px 22px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-left: 10px;
+      transition: 0.3s;
+    }
+
+    .outline-button:hover {
+      background-color: white;
+      color: #183b35;
+    }
+
+    section {
+      padding: 90px 8%;
+    }
+
+    section h2 {
+      font-size: 42px;
+      color: #183b35;
+      margin-bottom: 25px;
+    }
+
+    .section-intro {
+      max-width: 750px;
+      font-size: 18px;
+      margin-bottom: 35px;
+    }
+
+    .about {
+      background-color: #fffaf0;
+    }
+
+    .about-content {
+      max-width: 850px;
+    }
+
+    .about-content p {
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .projects {
+      background-color: #e6efe2;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .project-card {
+      background-color: white;
+      padding: 28px;
+      border-radius: 15px;
+      border-top: 5px solid #e8ae43;
+      box-shadow: 0 8px 20px rgba(24, 59, 53, 0.08);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(24, 59, 53, 0.15);
+    }
+
+    .project-card h3 {
+      font-size: 25px;
+      color: #183b35;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      font-size: 16px;
+    }
+
+    .contact {
+      background-color: #183b35;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #f4c95d;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin: 12px 0 25px;
+    }
+
+    footer {
+      background-color: #102b27;
+      color: white;
+      padding: 45px 8% 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    footer h3 {
+      color: #f4c95d;
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+    }
+
+    footer a:hover {
+      color: #f4c95d;
+    }
+
+    .copyright {
+      border-top: 1px solid #49645d;
+      padding-top: 20px;
+      text-align: center;
+      color: #d7ded5;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 90px 8%;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .outline-button {
+        margin: 12px 0 0;
+      }
+
+      section h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">InAmigos Foundation</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>
+          Uniting minds<br>
+          <span>for change.</span>
+        </h1>
+
+        <p>
+          InAmigos Foundation brings people together to create meaningful
+          change through kindness, education, opportunity, and action.
+        </p>
+
+        <a href="#projects" class="button">Explore Projects</a>
+
+        <a href="#contact" class="outline-button">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>About InAmigos Foundation</h2>
+
+        <p>
+          InAmigos Foundation is a people-powered nonprofit organization
+          working to support communities, children, animals, women, youth,
+          and the environment.
+        </p>
+
+        <p>
+          We believe that when people unite with compassion and purpose,
+          small actions can create lasting and positive change in society.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <h2>Our Projects</h2>
+
+      <p class="section-intro">
+        Our projects focus on building a more caring, educated, empowered,
+        and sustainable community.
+      </p>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>Seva 🍚👚</h3>
+          <p>
+            Helping those in need with food, clothes, and essential supplies.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Bachpanshala 📚</h3>
+          <p>
+            Providing education and care to underprivileged children.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Jeev 😇</h3>
+          <p>
+            Supporting and rescuing animals with compassion and care.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Udaan 🎓💫</h3>
+          <p>
+            Empowering women with skills, confidence, and opportunities.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Prakriti 🌍✨</h3>
+          <p>
+            Protecting the environment through clean-up drives and plantation.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Vikas ✨</h3>
+          <p>
+            Helping youth grow through internships and skill-building.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2>Contact InAmigos Foundation</h2>
+
+      <p>
+        Join hands with us and become a part of positive change.
+      </p>
+
+      <button
+        class="button"
+        type="button"
+        onclick="window.open('https://inamigosfoundation.org.in/', '_blank')"
+      >
+        Visit Official Website
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+
+      <div>
+        <h3>InAmigos Foundation</h3>
+        <p>Uniting minds for change.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>
+        <h3>Source</h3>
+        <a
+          href="https://inamigosfoundation.org.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Official InAmigos Foundation Website
+        </a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 InAmigos Foundation Awareness Website
+      <br>
+      Created using HTML &amp; CSS
+    </div>
+  </footer>
+
+</body>
+</html>
+```
